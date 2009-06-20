@@ -1,0 +1,2 @@
+class TimeplotController < ApplicationController
+end
