@@ -27,9 +27,9 @@ class Timeplot < ActiveRecord::Base
       temp_array = []
       results.each do |result|
         unless result.content.empty?
-          temp_array << result.content
+          temp_array << "#{result.content},"
         end
       end            
-    return temp_array.to_csv
+    return temp_array.join("\n")
   end
 end

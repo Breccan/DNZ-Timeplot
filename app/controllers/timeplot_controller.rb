@@ -15,7 +15,7 @@ class TimeplotController < ApplicationController
       csv = Timeplot.fetch(params[:search_text]) 
 
       
-      render :csv => csv
+      render :text => csv
     else
       redirect_to(:controller => 'timeplot', :action => 'timeplot')
     end
