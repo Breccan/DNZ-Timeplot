@@ -7,7 +7,7 @@ class Timeplot < ActiveRecord::Base
     # You should choose better exception.
     raise ArgumentError, 'HTTP redirect too deep' if limit == 0
 
-    response = Net::HTTP.get_response(URI.parse("http://api.digitalnz.org/records/v1.xml/?search_text=kittens&facets=year&api_key=387d16c7596c9cfff190d14a81ec189a"))
+    response = Net::HTTP.get_response(URI.parse("http://api.digitalnz.org/records/v1.xml/?search_text=kittens&facets=year&api_key=#{API_KEY}"))
     case response
     when Net::HTTPSuccess     then response
     when Net::HTTPRedirection then fetch(response['location'], limit - 1)
