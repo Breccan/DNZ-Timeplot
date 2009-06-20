@@ -12,11 +12,10 @@ class TimeplotController < ApplicationController
     
     unless params[:search_text].nil? || params[:search_text].empty?  
       
-      json = DigitalNz::TimelineSearch.query(params[:search_text]) 
+      csv = Timeplot.fetch(params[:search_text]) 
 
       
-      
-      render :json => json
+      render :csv => csv
     else
       redirect_to(:controller => 'timeplot', :action => 'timeplot')
     end

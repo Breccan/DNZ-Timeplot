@@ -568,3 +568,513 @@ ActionController::RoutingError (No route matches "/timeplot/__history__.html" wi
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (95.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTimeplots (20090620015206)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "timeplots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090620015206')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("timeplots")[0m
+
+
+Processing TimeplotController#timeplot (for 127.0.0.1 at 2009-06-20 14:26:47) [GET]
+Rendering timeplot/timeplot
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/timeplot/timeplot]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:26:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/digitalnz-logo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:26:50) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeplot/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:26:56) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NameError (uninitialized constant TimeplotController::TimePlot):
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:27:09) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NameError (uninitialized constant TimeplotController::Timeplot):
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:27:12) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NameError (uninitialized constant TimeplotController::Timeplot):
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (102.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:27:27) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+SyntaxError (/Users/willmarshall/Projects/DNZ-Timeplot/app/models/timeplot.rb:41: syntax error, unexpected kEND, expecting $end):
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (38.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:27:49) [GET]
+  Parameters: {"search_text"=>"kittens"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `fetch' for Timeplot(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (93.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:28:04) [GET]
+  Parameters: {"search_text"=>"kittens"}
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `fetch' for Timeplot(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:28:07) [GET]
+  Parameters: {"search_text"=>"kittens"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `fetch' for Timeplot(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:29:11) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NameError (uninitialized constant Timeplot::XML):
+  app/models/timeplot.rb:15:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (90.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:30:30) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NameError (uninitialized constant Timeplot::XML):
+  app/models/timeplot.rb:17:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:30:32) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NameError (uninitialized constant Timeplot::XML):
+  app/models/timeplot.rb:17:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:31:12) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NoMethodError (undefined method `each' for #<LibXML::XML::Document:0x24465f4>):
+  app/models/timeplot.rb:25:in `response_to_json'
+  app/models/timeplot.rb:19:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:31:46) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+
+NoMethodError (undefined method `each' for #<LibXML::XML::Document:0x2656e84>):
+  app/models/timeplot.rb:26:in `response_to_json'
+  app/models/timeplot.rb:19:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:32:28) [GET]
+  Parameters: {"search_text"=>"kittens"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `temp_hash' for Timeplot(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/timeplot.rb:40:in `response_to_json'
+  app/models/timeplot.rb:19:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:33:24) [GET]
+  Parameters: {"search_text"=>"kittens"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `temp_hash' for Timeplot(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/timeplot.rb:26:in `response_to_json'
+  app/models/timeplot.rb:19:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:33:35) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 285ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:34:01) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 219ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:34:09) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 235ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:34:39) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 243935ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:38:53) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 392ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:40:02) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 372ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:40:38) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 372ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:41:16) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NoMethodError (undefined method `strip' for #<Array:0x267b70c>):
+  app/models/timeplot.rb:31:in `response_to_json'
+  app/models/timeplot.rb:20:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:41:21) [GET]
+  Parameters: {"search_text"=>"kittens"}
+
+NoMethodError (undefined method `strip!' for #<Array:0x24f9258>):
+  app/models/timeplot.rb:31:in `response_to_json'
+  app/models/timeplot.rb:20:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:42:07) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 165ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:42:23) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 101071ms (View: 1, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:44:09) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 21381ms (View: 1, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:44:42) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 166ms (View: 1, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:44:52) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 168ms (View: 1, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:45:50) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 184ms (View: 1, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:46:15) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 169ms (View: 1, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:46:28) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 224ms (View: 1, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:49:02) [GET]
+  Parameters: {"search_text"=>"kittens"}
+Completed in 464ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/search?search_text=kittens]
+
+
+Processing TimeplotController#index (for 127.0.0.1 at 2009-06-20 14:49:05) [GET]
+Rendering timeplot/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/timeplot/]
+
+
+Processing TimeplotController#timeplot (for 127.0.0.1 at 2009-06-20 14:49:09) [GET]
+Rendering timeplot/timeplot
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/timeplot/timeplot]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:49:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/digitalnz-logo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:49:09) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeplot/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:49:09) [GET]
+
+ActionController::RoutingError (No route matches "/timeplot/data.txt" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TimeplotController#timeplot (for 127.0.0.1 at 2009-06-20 14:49:46) [GET]
+Rendering timeplot/timeplot
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/timeplot/timeplot]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:49:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/digitalnz-logo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:49:46) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeplot/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TimeplotController#timeplot (for 127.0.0.1 at 2009-06-20 14:57:03) [GET]
+Rendering timeplot/timeplot
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/timeplot/timeplot]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:57:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/digitalnz-logo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:57:07) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeplot/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:57:07) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:57:46) [GET]
+Redirected to http://localhost:3000/timeplot/timeplot
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/timeplot/search]
+
+
+Processing TimeplotController#timeplot (for 127.0.0.1 at 2009-06-20 14:57:46) [GET]
+Rendering timeplot/timeplot
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/timeplot/timeplot]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:57:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/digitalnz-logo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:57:47) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeplot/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:57:47) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TimeplotController#timeplot (for 127.0.0.1 at 2009-06-20 14:58:02) [GET]
+Rendering timeplot/timeplot
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/timeplot/timeplot]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:58:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/digitalnz-logo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-20 14:58:02) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeplot/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:58:03) [GET]
+  Parameters: {"search_text"=>"foo"}
+
+NoMethodError (undefined method `to_csv' for #<Array:0x253107c>):
+  app/models/timeplot.rb:33:in `response_to_json'
+  app/models/timeplot.rb:20:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (33.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TimeplotController#search (for 127.0.0.1 at 2009-06-20 14:58:11) [GET]
+  Parameters: {"search_text"=>"foo"}
+
+NoMethodError (undefined method `to_csv' for #<Array:0x23e76a8>):
+  app/models/timeplot.rb:33:in `response_to_json'
+  app/models/timeplot.rb:20:in `fetch'
+  app/controllers/timeplot_controller.rb:15:in `search'
+
+Rendered rescues/_trace (99.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
