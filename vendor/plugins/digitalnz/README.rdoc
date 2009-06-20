@@ -1,0 +1,36 @@
+= DigitalNZ
+
+== Description
+
+A small gem to interface with the DigitalNZ API at http://www.digitalnz.org/
+
+== Installation
+
+=== Stable
+
+    sudo gem install digitalnz
+
+=== Bleeding Edge
+
+    $ git clone git://github.com/jamesotron/digitalnz.git
+    $ cd digitalnz
+    $ rake gem && sudo gem install pkg/digitalnz-<version>.gem
+
+== Usage
+
+To get started you'll need to grab an API key from DigialNZ, you can get this here: http://www.digitalnz.org/dashboard/api_key
+
+Now that you've got your API key you can try using it:
+
+    $ irb -r rubygems
+    >> require 'digitalnz'
+
+Next, set your API key (you only need to do this once per session):
+
+    >> DigitalNZ.api_key = '<your api key here>'
+
+== License
+
+Copyright (c) 2009 James Harton (jamesotron@gmail.com)
+
+Please see the LICENSE file with this distribution.

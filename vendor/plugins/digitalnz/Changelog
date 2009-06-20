@@ -1,0 +1,7 @@
+digitalnz (0.1.1) unstable; urgency=low
+
+  * Initial release to github.  Searching works, metadata retrieval
+    not so great.
+
+ -- James Harton <jamesotron@gmail.com>  Wed, Mar 11 2009 11:00:00 +1300
+
